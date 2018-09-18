@@ -45,9 +45,9 @@ def parse_args():
     """Returns a DepthFinderArgs tuple of command line arguments
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("--group")
-    parser.add_argument("--artifact")
-    parser.add_argument('--version')
+    parser.add_argument("group", metavar='<group>')
+    parser.add_argument("artifact", metavar='<artifact>')
+    parser.add_argument('version', metavar='<version>')
 
     args = parser.parse_args()
     if None in [args.group, args.artifact, args.version]:
