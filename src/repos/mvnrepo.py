@@ -27,6 +27,15 @@ class MvnParser:
         self.logger = logging.getLogger('MvnParser')
         self.artifacts = set()
 
+    def get_dependency_list(self, artifact):
+        """
+        Returns an iterable object of the given artifact and its dependencies
+        :param artifact: An Artifact to search for
+        :return:
+        """
+        self._get_dependencies(artifact)
+        return self.artifacts
+
     def get_artifact(self, table_row):
         """Returns an Artifact extracted from the given table row
 
@@ -83,10 +92,6 @@ class MvnParser:
         for div in self._get_dependency_divs():
             deps = deps.union(self._get_artifacts_from_div(div))
         return deps
-
-    def get_dependency_list(self, artifact):
-        self._get_dependencies(artifact)
-        return self.artifacts
 
     def _get_dependencies(self, artifact):
         url = "{}/{}".format(MvnParser.BASE_URL, artifact.href)
