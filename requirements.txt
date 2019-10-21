@@ -12,5 +12,5 @@ python-status==1.0.1
 requests==2.19.1
 singledispatch==3.4.0.3
 six==1.11.0
-urllib3==1.23
+urllib3==1.24.2
 yarl==1.2.6
