@@ -6,10 +6,11 @@ bs4==0.0.1
 certifi==2018.8.24
 chardet==3.0.4
 idna==2.7
+idna-ssl==1.1.0
 json-encoder==0.4.4
 multidict==4.4.1
 python-status==1.0.1
-requests==2.19.1
+requests==2.24.0
 singledispatch==3.4.0.3
 six==1.11.0
 urllib3==1.24.2
